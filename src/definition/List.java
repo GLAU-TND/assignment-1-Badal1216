@@ -24,8 +24,10 @@ public class List<E> implements ListADT<E> {
             throw new IndexOutOfBoundsException(Integer.toString(index));
         else if (index == 0) {
             addFirst(item);
-        } else
+        } else {
             Node<E> temp = getNode(index - 1);
+            addAfter(temp, item);
+        }
 
     }
 
@@ -38,9 +40,18 @@ public class List<E> implements ListADT<E> {
     }
 
 
+    public void print() {
+        System.out.print("[");
+        for (int i = 0; i < size; i++) {
+            E data = this.getNode(i).getData();
+            System.out.print(data + (i < size - 1 ? ", " : " "));
+        }
+        System.out.println("]");
+    }
+
     @Override
-    public boolean add(E item) {
-        return false;
+    public void add(E item) {
+        add(size, item);
     }
 
     @Override

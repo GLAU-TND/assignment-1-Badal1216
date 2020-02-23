@@ -7,12 +7,23 @@ public class ContactList {
         contacts = new List<>();
     }
 
-    public void insertPerson(Person data) {
+    @Override
+    public String toString() {
+        return "ContactList{" +
+                "contacts=" + contacts +
+                '}';
+    }
 
-        contacts.add(new Person(firstName, lastName, (List<String>) numbers, email));
+    public void insertPerson(String firstName) {
+
+        contacts.add(new Person(firstName));
     }
 
     public Person removePerson() {
         return contacts.remove();
+    }
+
+    public void displayList() {
+        contacts.print();
     }
 }

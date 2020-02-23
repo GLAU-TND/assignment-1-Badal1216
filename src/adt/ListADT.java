@@ -1,7 +1,7 @@
 package adt;
 
 public interface ListADT<E> {
-    boolean add(E item);
+    void add(E item);
 
     E remove();
 

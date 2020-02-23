@@ -8,7 +8,7 @@ public class Person implements Comparable<Person> {
     private List<String> numbers;
     private String email;
 
-    public Person(String firstName, String lastName, List<String> numbers, String email) {
+    public Person(String firstName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.numbers = numbers;
