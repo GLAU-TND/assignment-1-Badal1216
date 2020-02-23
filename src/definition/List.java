@@ -14,6 +14,10 @@ public class List<E> implements ListADT<E> {
         size++;
     }
 
+    private void addAfter(Node<E> node, E item) {
+
+    }
+
 
     @Override
     public boolean add(E item) {
